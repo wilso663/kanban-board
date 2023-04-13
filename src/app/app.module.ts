@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import {environment} from '../environments/environment';
-
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -27,7 +27,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [{
+    provide: FIREBASE_OPTIONS, useValue: environment.firebase}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
