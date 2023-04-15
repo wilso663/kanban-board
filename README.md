@@ -12,4 +12,5 @@ And the source code is available here: [link](https://www.github.com/wilso663/ka
 Users of this project can create, update, and delete Kanban boards as well as tasks on those boards.  
 To access the boards, users will also need to create an account using an email/password or google signin.  
 
-Example screenshot [Image](/readme-assets/KanbanScreenshot.png)
+UI screenshot  
+![image](/readme-assets/KanbanScreenshot.png)
