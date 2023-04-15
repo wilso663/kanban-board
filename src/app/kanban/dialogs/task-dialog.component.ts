@@ -30,7 +30,10 @@ import { BoardService } from '../board.service';
     <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
       {{ data.isNew ? 'Add Task' : 'Update Task' }}
     </button>
-
+    <app-delete-button 
+      *ngIf="!data.isNew"
+      (delete)="handleTaskDelete()">
+    </app-delete-button>
   </div>
   `,
   styleUrls: ['./dialog.component.scss']

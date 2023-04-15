@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { MatDialog } from '@angular/material/dialog';
 import { BoardService } from '../board.service';
-import { Board, Task } from '../board.model';
+import { Task } from '../board.model';
 import { TaskDialogComponent } from '../dialogs/task-dialog.component';
 
 @Component({
@@ -43,5 +43,9 @@ export class BoardComponent {
         }
       }
     });
+  }
+
+  handleDelete() {
+    this.boardService.deleteBoard(this.board.id);
   }
 }
